@@ -1,0 +1,79 @@
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Animal("Rex", 5);
+        System.out.println("Nome do animal: " + animal.getNome());
+        System.out.println("Idade do animal: " + animal.getIdade());
+
+        Cachorro cachorro = new Cachorro("Totó", 3, "Poodle");
+        System.out.println("Nome do cachorro: " + cachorro.getNome());
+        System.out.println("Idade do cachorro: " + cachorro.getIdade());
+        System.out.println("Raça do cachorro: " + cachorro.getRaca());
+
+        Gato gato = new Gato("Frajola", 2, "Preto");
+        System.out.println("Nome do gato: " + gato.getNome());
+        System.out.println("Idade do gato: " + gato.getIdade());
+        System.out.println("Cor do pelo do gato: " + gato.getCorPelo());
+
+        Passaro passaro = new Passaro("Canarinho", 1, "Curvo");
+        System.out.println("Nome do passaro: " + passaro.getNome());
+        System.out.println("Idade do passaro: " + passaro.getIdade());
+        System.out.println("Tipo de bico do passaro: " + passaro.getTipoBico());
+    }
+}
+
+class Animal {
+    private String nome;
+    private int idade;
+
+    public Animal(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+}
+
+class Cachorro extends Animal {
+    private String raca;
+
+    public Cachorro(String nome, int idade, String raca) {
+        super(nome, idade);
+        this.raca = raca;
+    }
+
+    public String getRaca() {
+        return raca;
+    }
+}
+
+class Gato extends Animal {
+    private String corPelo;
+
+    public Gato(String nome, int idade, String corPelo) {
+        super(nome, idade);
+        this.corPelo = corPelo;
+    }
+
+    public String getCorPelo() {
+        return corPelo;
+    }
+}
+
+class Passaro extends Animal {
+    private String tipoBico;
+
+    public Passaro(String nome, int idade, String tipoBico) {
+        super(nome, idade);
+        this.tipoBico = tipoBico;
+    }
+
+    public String getTipoBico() {
+        return tipoBico;
+    }
+}
