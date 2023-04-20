@@ -1,0 +1,26 @@
+public class Carro {
+    private String modelo;
+    private int ano;
+
+    public void setModelo(String modelo) {
+        if (modelo == null) {
+            throw new IllegalArgumentException("O modelo não pode ser nulo");
+        }
+        this.modelo = modelo;
+    }
+
+    public void setAno(int ano) {
+        if (ano <= 1900) {
+            throw new IllegalArgumentException("O ano deve ser maior do que 1900");
+        }
+        this.ano = ano;
+    }
+
+    public String getModelo() {
+        return this.modelo;
+    }
+
+    public int getAno() {
+        return this.ano;
+    }
+}
